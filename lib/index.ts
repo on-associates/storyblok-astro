@@ -76,6 +76,10 @@ export default function storyblokIntegration(
     useCustomApi: false,
     bridge: true,
     ...options,
+    apiOptions: {
+      ...options?.apiOptions,
+      resolveNestedRelations: true,
+    }
   };
   return {
     name: "@storyblok/astro",
